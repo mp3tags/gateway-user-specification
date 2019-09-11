@@ -1,0 +1,24 @@
+UploadResponse:
+  type: object
+  required:
+    - version
+    - tags
+  properties:
+    version:
+      type: string
+      x-nullable: false
+    tags:
+      type: array
+      items:
+        $ref: '#/Tag'
+
+Tag:
+  type: object
+  x-go-name: tag
+  properties:
+    name:
+      type: string
+      x-nullable: false
+    value:
+      type: string
+      x-nullable: string

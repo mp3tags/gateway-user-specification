@@ -1,0 +1,53 @@
+swagger: '2.0'
+info:
+  description: 'Mp3tag service. You can find out more at [http://mp3tags.org](http://mp3tags.org)'
+  version: 0.0.0
+  title: mp3tags
+host: mp3tags.org
+basePath: /api/v1
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+
+paths:
+  /upload:
+
+    post:
+      summary: upload file to server
+      parameters:
+        - in: formData
+          name: file
+          required: true
+          type: file
+      responses:
+        200:
+          description: Succesful
+          schema:
+            $ref: 'responses/upload.yaml#/UploadResponse'
+        400:
+          description: Bad Request
+        500:
+          description: Internal error
+
+  /tag:
+    post:
+      summary: change tags
+      parameters:
+        - in: body
+          name: tags
+          required: true
+          schema:
+            $ref: 'requests/tag.yaml#/ChangeTagsRequest'
+      responses:
+        200:
+          description: Succesfull
+          schema:
+            type: file
+        400:
+          description: Bad Request
+        500:
+          description: Internal error
+

@@ -1,0 +1,1 @@
+# Gateway server swagger specification
