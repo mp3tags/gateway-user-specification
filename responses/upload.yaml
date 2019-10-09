@@ -10,9 +10,9 @@ UploadResponse:
     tags:
       type: array
       items:
-        $ref: '#/Tag'
+        $ref: '#/TagResponse'
 
-Tag:
+TagResponse:
   type: object
   x-go-name: tag
   properties:
@@ -20,5 +20,5 @@ Tag:
       type: string
       x-nullable: false
     value:
-      type: string
-      x-nullable: string
+      type: object
+      x-nullable: false

@@ -13,7 +13,7 @@ produces:
   - application/json
 
 paths:
-  /upload:
+  /api/v1/upload:
 
     post:
       summary: upload file to server
@@ -32,7 +32,7 @@ paths:
         500:
           description: Internal error
 
-  /tag:
+  /api/v1/tag:
     post:
       summary: change tags
       parameters:

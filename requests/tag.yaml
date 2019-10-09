@@ -10,9 +10,9 @@ ChangeTagsRequest:
     tags:
       type: array
       items:
-        $ref: '#/Tag'
+        $ref: '#/ChangeTag'
 
-Tag:
+ChangeTag:
   type: object
   x-go-name: tag
   properties:
